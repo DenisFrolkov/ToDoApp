@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/gray">
 
     <ImageView
         android:id="@+id/imageView"
@@ -63,11 +64,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
+            android:backgroundTint="@color/white"
             android:hint="@string/email"
             android:padding="16dp"
             android:paddingStart="30dp"
             android:paddingEnd="0dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -93,6 +95,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/regular"
             android:hint="@string/password"
+            android:backgroundTint="@color/white"
             android:padding="16dp"
             android:paddingStart="30dp"
             android:paddingEnd="0dp"
