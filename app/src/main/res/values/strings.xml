@@ -9,4 +9,11 @@
     <string name="have_an">Do not have an account?</string>
     <string name="signup">SignUp</string>
     <string name="undraw_sign">undraw_sign</string>
+    <string name="welcome_onboard">Welcome Onboard!</string>
+    <string name="we_help">We help you meet up you tasks on time.</string>
+    <string name="already_have">Already have an account?</string>
+    <string name="full_name">Enter your full name</string>
+    <string name="enter_password">Enter password</string>
+    <string name="confirm">Confirm password</string>
+    <string name="register">Register</string>
 </resources>
