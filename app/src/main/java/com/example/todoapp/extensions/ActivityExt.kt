@@ -38,11 +38,23 @@ fun Activity.validatePass(text: Editable?): String? {
     }
 }
 
-fun Activity.validateConf(text1: Editable?, text2: Editable?): String? {
-
-    if(text1?.isNotEmpty()!! && text1 == text2) {
-        return null
-    } else {
-        return "Пароли не совпадают"
+fun Activity.validateConf(text: Editable?): String? {
+    return if(text?.isNotEmpty()!!)
+    {
+        if(text.length >= 8) {
+            null
+        } else {
+            "Пароль должен содержать больше 8 символов"
+        }
+    }
+    else {
+        "Поле не должно быть пустым"
     }
 }
+
+//    if(text1?.isNotEmpty()!! && text1 == text2) {
+//        return null
+//    } else {
+//        return "Пароли не совпадают"
+//    }
+//}

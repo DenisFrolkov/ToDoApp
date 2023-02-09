@@ -3,6 +3,7 @@ package com.example.todoapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.todoapp.databinding.ActivityMainBinding
 import com.example.todoapp.extensions.validateEmail
 import com.example.todoapp.extensions.validatePass
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
             binding.textInputLayoutEmail.error = validateEmail(email)
             binding.textInputLayoutPassword.error = validatePass(pass)
+
+            if(validateEmail(email) == null && validatePass(pass) == null) {
+                Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, RegistrationActivity::class.java))
+            }
         }
 
         binding.textView3.setOnClickListener{

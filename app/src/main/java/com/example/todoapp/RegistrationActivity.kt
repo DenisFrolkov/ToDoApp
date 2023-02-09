@@ -2,6 +2,7 @@ package com.example.todoapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.todoapp.databinding.ActivityRegistrationBinding
 import com.example.todoapp.extensions.validateConf
@@ -26,7 +27,12 @@ class RegistrationActivity : AppCompatActivity() {
             binding.textInputLayoutName.error = validateName(name)
             binding.textInputLayoutEmail.error = validateEmail(email)
             binding.textInputLayoutPassword.error = validatePass(pass)
-            binding.textInputLayoutConfirm.error = validateConf(pass, confirm)
+            binding.textInputLayoutConfirm.error = validateConf(confirm)
+
+            if(validateName(name) == null && validateEmail(email) == null && validatePass(pass) == null && validateConf(confirm) == null) {
+                Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, RegistrationActivity::class.java))
+            }
         }
 
         binding.textView3.setOnClickListener {
