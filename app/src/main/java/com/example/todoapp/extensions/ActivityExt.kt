@@ -51,10 +51,3 @@ fun Activity.validateConf(text: Editable?): String? {
         "Поле не должно быть пустым"
     }
 }
-
-//    if(text1?.isNotEmpty()!! && text1 == text2) {
-//        return null
-//    } else {
-//        return "Пароли не совпадают"
-//    }
-//}

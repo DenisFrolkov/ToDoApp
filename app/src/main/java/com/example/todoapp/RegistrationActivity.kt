@@ -17,21 +17,24 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
+        val name = binding.textInputEditName.text
+        val email = binding.textInputEditEmail.text
+        val pass = binding.textInputEditPassword.text
+        val confirm = binding.textInputEditConfirm.text
+        val validname = validateName(name)
+        val validemail = validateEmail(email)
+        val validpass = validatePass(pass)
+        val validconf = validateConf(confirm)
 
         binding.materialButton.setOnClickListener {
-            val name = binding.textInputEditName.text
-            val email = binding.textInputEditEmail.text
-            val pass = binding.textInputEditPassword.text
-            val confirm = binding.textInputEditConfirm.text
+            binding.textInputLayoutName.error = validname
+            binding.textInputLayoutEmail.error = validemail
+            binding.textInputLayoutPassword.error = validpass
+            binding.textInputLayoutConfirm.error = validconf
 
-            binding.textInputLayoutName.error = validateName(name)
-            binding.textInputLayoutEmail.error = validateEmail(email)
-            binding.textInputLayoutPassword.error = validatePass(pass)
-            binding.textInputLayoutConfirm.error = validateConf(confirm)
-
-            if(validateName(name) == null && validateEmail(email) == null && validatePass(pass) == null && validateConf(confirm) == null) {
+            if(validname == null && validemail == null && validpass == null && validconf == null) {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, RegistrationActivity::class.java))
             }
         }
 

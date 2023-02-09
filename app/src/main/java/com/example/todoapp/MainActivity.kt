@@ -14,15 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
+        val email = binding.textInputEditEmail.text
+        val pass = binding.textInputEditPassword.text
+        val validemail = validateEmail(email)
+        val validpass = validatePass(pass)
+
 
         binding.signButton.setOnClickListener{
-            val email = binding.textInputEditEmail.text
-            val pass = binding.textInputEditPassword.text
+            binding.textInputLayoutEmail.error = validemail
+            binding.textInputLayoutPassword.error = validpass
 
-            binding.textInputLayoutEmail.error = validateEmail(email)
-            binding.textInputLayoutPassword.error = validatePass(pass)
-
-            if(validateEmail(email) == null && validatePass(pass) == null) {
+            if(validemail == null && validpass == null) {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, RegistrationActivity::class.java))
             }
