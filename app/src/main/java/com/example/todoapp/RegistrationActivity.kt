@@ -17,15 +17,10 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
-        val name = binding.textInputEditName.text
-        val email = binding.textInputEditEmail.text
-        val pass = binding.textInputEditPassword.text
-        val confirm = binding.textInputEditConfirm.text
-        val validname = validateName(name)
-        val validemail = validateEmail(email)
-        val validpass = validatePass(pass)
-        val validconf = validateConf(confirm)
+        val validname = validateName(binding.textInputEditName.text)
+        val validemail = validateEmail(binding.textInputEditEmail.text)
+        val validpass = validatePass(binding.textInputEditPassword.text)
+        val validconf = validateConf(binding.textInputEditConfirm.text)
 
         binding.materialButton.setOnClickListener {
             binding.textInputLayoutName.error = validname

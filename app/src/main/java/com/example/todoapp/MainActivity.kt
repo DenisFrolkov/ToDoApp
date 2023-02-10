@@ -14,11 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide()
-        val email = binding.textInputEditEmail.text
-        val pass = binding.textInputEditPassword.text
-        val validemail = validateEmail(email)
-        val validpass = validatePass(pass)
+        val validemail = validateEmail(binding.textInputEditEmail.text)
+        val validpass = validatePass(binding.textInputEditPassword.text)
 
 
         binding.signButton.setOnClickListener{
