@@ -17,19 +17,24 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val validname = validateName(binding.textInputEditName.text)
-        val validemail = validateEmail(binding.textInputEditEmail.text)
-        val validpass = validatePass(binding.textInputEditPassword.text)
-        val validconf = validateConf(binding.textInputEditConfirm.text)
+        var validname: String?
+        var validemail: String?
+        var validpass: String?
+        var validconfirm: String?
 
         binding.materialButton.setOnClickListener {
+            validname = validateName(binding.textInputEditName.text)
+            validemail = validateEmail(binding.textInputEditEmail.text)
+            validpass = validatePass(binding.textInputEditPassword.text)
+            validconfirm = validateConf(binding.textInputEditConfirm.text)
             binding.textInputLayoutName.error = validname
             binding.textInputLayoutEmail.error = validemail
             binding.textInputLayoutPassword.error = validpass
-            binding.textInputLayoutConfirm.error = validconf
+            binding.textInputLayoutConfirm.error = validconfirm
 
-            if(validname == null && validemail == null && validpass == null && validconf == null) {
+            if(validname == null && validemail == null && validpass == null && validconfirm == null) {
                 Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, ProfileActivity::class.java))
             }
         }
 
