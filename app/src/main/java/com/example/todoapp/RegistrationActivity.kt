@@ -22,6 +22,7 @@ class RegistrationActivity : AppCompatActivity() {
         var validpass: String?
         var validconfirm: String?
 
+
         binding.materialButton.setOnClickListener {
             validname = validateName(binding.textInputEditName.text)
             validemail = validateEmail(binding.textInputEditEmail.text)

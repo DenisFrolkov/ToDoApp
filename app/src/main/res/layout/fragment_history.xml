@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HistoryFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="History"
-        android:textSize="30sp"
-        android:gravity="center" />
 
+    <ImageView
+        android:id="@+id/imageEllipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ellipse"
+        android:contentDescription="@string/ellipse" />
+
+    <ImageView
+        android:id="@+id/imageBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/history"
+        android:contentDescription="@string/history"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/no_history"
+        android:textColorHint="@color/transparent_gray"
+        android:textSize="32sp"
+        android:fontFamily="@font/bold"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="420dp"/>
 </FrameLayout>

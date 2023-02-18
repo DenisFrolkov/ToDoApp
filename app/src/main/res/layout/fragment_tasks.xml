@@ -5,11 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".TasksFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Tasks"
-        android:textSize="30dp"
-        android:gravity="center" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="78dp"
+        android:background="@color/gray"/>
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_list"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:fontFamily="@font/bold"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="8dp"/>
 </FrameLayout>

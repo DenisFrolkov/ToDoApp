@@ -2,15 +2,14 @@ package com.example.todoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.todoapp.databinding.ProfileMainBinding
+import com.example.todoapp.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
-    private lateinit var binding: ProfileMainBinding
+    private lateinit var binding: ActivityProfileBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ProfileMainBinding.inflate(layoutInflater)
+        binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId){
                 R.id.fragmentProfile -> {

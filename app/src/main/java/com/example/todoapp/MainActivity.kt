@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.textView3.setOnClickListener{
-            startActivity(Intent(this, RegistrationActivity::class.java))
+            startActivity(Intent(this, ProfileActivity::class.java))
         }
 
         binding.textView4.setOnClickListener{
