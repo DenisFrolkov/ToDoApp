@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@color/yellow"
+            />
+
+        <ImageView
+            android:id="@+id/imageEllipse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_2"
+            android:contentDescription="@string/ellipse" />
+
+        <ImageView
+            android:id="@+id/imagePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse_45"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="88dp"
+            android:contentDescription="@string/photo"/>
+
+        <ImageView
+            android:id="@+id/imageExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/exit"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/exit" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_email"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="200dp"/>
+    </FrameLayout>
+</ScrollView>

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.text.Editable
 
 fun Activity.validateName(text: Editable?): String? {
-    return if (text.toString().isNotEmpty()) null else "Поле пустое"
+    return if (text.toString().isNotEmpty()) null else "Поле не должно быть пустым"
 }
 
 fun Activity.validateEmail(text: Editable?): String? {
