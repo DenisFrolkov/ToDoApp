@@ -10,24 +10,18 @@ import com.example.todoapp.extensions.validateEmail
 import com.example.todoapp.extensions.validateName
 import com.example.todoapp.extensions.validatePass
 
-
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var validname: String?
-        var validemail: String?
-        var validpass: String?
-        var validconfirm: String?
-
 
         binding.materialButton.setOnClickListener {
-            validname = validateName(binding.textInputEditName.text)
-            validemail = validateEmail(binding.textInputEditEmail.text)
-            validpass = validatePass(binding.textInputEditPassword.text)
-            validconfirm = validateConf(binding.textInputEditConfirm.text)
+            val validname: String? = validateName(binding.textInputEditName.text)
+            val validemail: String? = validateEmail(binding.textInputEditEmail.text)
+            val validpass: String? = validatePass(binding.textInputEditPassword.text)
+            val validconfirm: String? = validateConf(binding.textInputEditConfirm.text)
             binding.textInputLayoutName.error = validname
             binding.textInputLayoutEmail.error = validemail
             binding.textInputLayoutPassword.error = validpass

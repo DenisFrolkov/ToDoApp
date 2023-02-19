@@ -14,13 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var validemail: String?
-        var validpass: String?
-
 
         binding.signButton.setOnClickListener{
-            validemail = validateEmail(binding.textInputEditEmail.text)
-            validpass = validatePass(binding.textInputEditPassword.text)
+            var validemail: String? = validateEmail(binding.textInputEditEmail.text)
+            var validpass: String? = validatePass(binding.textInputEditPassword.text)
             binding.textInputLayoutEmail.error = validemail
             binding.textInputLayoutPassword.error = validpass
 

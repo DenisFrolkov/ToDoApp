@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ellipse"
-        android:contentDescription="@string/ellipse" />
+        android:contentDescription="@string/ellipse"/>
 
     <ImageView
         android:id="@+id/imageBook"
@@ -27,10 +27,9 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/no_history"
-        android:textColorHint="@color/transparent_gray"
-        android:textSize="32sp"
-        android:fontFamily="@font/bold"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="420dp"/>
+        android:layout_marginTop="420dp"
+        android:text="@string/no_history"
+        android:fontFamily="@font/bold"
+        android:textSize="32sp"/>
 </FrameLayout>

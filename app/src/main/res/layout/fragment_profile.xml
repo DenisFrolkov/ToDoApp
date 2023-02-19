@@ -9,7 +9,7 @@
     tools:context=".ProfileFragment">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <View
             android:id="@+id/view"
@@ -47,8 +47,11 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_marginStart="130dp"
+            android:text="@string/welcome_email"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="125dp"
             android:layout_marginTop="200dp"/>
     </FrameLayout>
 </ScrollView>
