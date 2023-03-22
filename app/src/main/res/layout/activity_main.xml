@@ -32,5 +32,4 @@
         app:menu="@menu/bot_nav_menu"
         app:itemIconTint="@color/white" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

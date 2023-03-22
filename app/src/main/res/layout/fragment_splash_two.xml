@@ -11,25 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageEllipse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/ellipse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ellipse" />
-
         <ImageView
             android:id="@+id/imagesSplashOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
             android:contentDescription="@string/images_splash"
-            app:srcCompat="@drawable/images_splash_two"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageEllipse" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/images_splash_two" />
 
         <TextView
             android:id="@+id/textViewOne"

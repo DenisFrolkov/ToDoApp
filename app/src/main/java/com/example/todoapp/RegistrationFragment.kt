@@ -24,7 +24,7 @@ class RegistrationFragment : Fragment() {
         binding = FragmentRegistrationBinding.inflate(inflater, container, false)
 
         binding.buttonRegister.setOnClickListener{
-            val text = binding.textInputEditEmail.text.toString()
+            ProfileFragment.text = binding.textInputEditEmail.text.toString()
             val validName: String? = validateName(binding.textInputEditEmail.text)
             val validEmail: String? = validateEmail(binding.textInputEditEmail.text)
             val validPass: String? = validatePass(binding.textInputEditPassword.text)
@@ -37,7 +37,7 @@ class RegistrationFragment : Fragment() {
                 Toast.makeText(activity,"Success!",Toast.LENGTH_SHORT).show()
                 findNavController().navigate(
                     R.id.action_registrationFragment_to_profile_graph,
-                    bundleOf("email" to text)
+                    bundleOf(getString(R.string.profile_email) to ProfileFragment.text)
                 )
             }
         }

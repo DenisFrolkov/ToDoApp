@@ -26,4 +26,6 @@
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor, est a aliquam. Pretium netus</string>
     <string name="indicators">indicators</string>
     <string name="images_splash">images splash one</string>
+    <string name="welcome_profile">Welcome %s!</string>
+    <string name="profile_email">email</string>
 </resources>

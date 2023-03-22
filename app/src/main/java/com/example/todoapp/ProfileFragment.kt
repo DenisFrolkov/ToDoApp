@@ -24,15 +24,19 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         bottomNavigationViewManager?.setNavigationViewVisibility(true)
-        val text = arguments?.getString("email").toString()
-        val email = "Welcome $text!"
-        binding.textViewOne.text = email
+        val email = getString(R.string.welcome_profile, text)
         binding.imageExit.setOnClickListener {
             findNavController().popBackStack()
             bottomNavigationViewManager?.setNavigationViewVisibility(false)
         }
+
+        binding.textViewOne.text = email
         return binding.root
+    }
+    companion object{
+        var text = ""
     }
 }

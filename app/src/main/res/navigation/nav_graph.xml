@@ -15,7 +15,7 @@
             app:destination="@id/registrationFragment" />
         <action
             android:id="@+id/action_loginFragment_to_profile_graph"
-            app:destination="@id/profile_graph"/>
+            app:destination="@id/profile_graph" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -40,7 +40,7 @@
             android:id="@+id/action_splashPagerFragment_to_registrationFragment"
             app:destination="@id/registrationFragment" />
     </fragment>
-    <include app:graph="@navigation/profile_graph" />
     <include app:graph="@navigation/history_graph" />
     <include app:graph="@navigation/task_graph" />
+    <include app:graph="@navigation/profile_graph" />
 </navigation>
