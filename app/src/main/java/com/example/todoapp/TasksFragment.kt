@@ -25,6 +25,37 @@ class TasksFragment : Fragment() {
     ): View {
         binding = FragmentTasksBinding.inflate(inflater, container, false)
         bottomNavigationViewManager?.setNavigationViewVisibility(true)
+        val adapter = TasksAdapter()
+        binding.recyclerView.adapter = adapter
+        adapter.submitList(tasks)
+        binding.buttonAddTask.setOnClickListener{
+            adapter.addItem(
+                Task(
+                    title = "sdgd2356787654300000fh",
+                    time = "13153",
+                    address = "123134235safsdg"
+                )
+            )
+        }
         return binding.root
+    }
+    companion object{
+        val tasks = listOf(
+            Task(
+                title = "sdgdfh",
+                time = "13153",
+                address = "123134235safsdg"
+            ),
+            Task(
+                title = "sdg1241351245dfh",
+                time = "13153",
+                address = "123134235safsdg"
+            ),
+            Task(
+                title = "sdgd2356787654300000fh",
+                time = "13153",
+                address = "123134235safsdg"
+            )
+        )
     }
 }

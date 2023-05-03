@@ -3,23 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TasksFragment">
 
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="78dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginStart="26dp"
+        android:fontFamily="@font/bold"
         android:text="@string/task_list"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:fontFamily="@font/bold"
-        android:layout_marginTop="38dp"
-        android:layout_marginLeft="26dp"
-        android:layout_marginBottom="8dp"/>
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="98dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_user"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/yellow"
+        android:layout_gravity="bottom|end"/>
 </FrameLayout>
