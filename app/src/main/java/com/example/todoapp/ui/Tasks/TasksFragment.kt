@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.ui.Tasks
 
 import android.content.Context
 import android.os.Bundle
@@ -7,9 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.todoapp.databinding.FragmentTasksBinding
+import com.example.todoapp.model.Task
+import com.example.todoapp.ui.Main.BottomNavigationViewManager
 
+@Suppress("UNREACHABLE_CODE")
 class TasksFragment : Fragment() {
     private lateinit var binding: FragmentTasksBinding
+    private val adapter = TasksAdapter()
     private var bottomNavigationViewManager: BottomNavigationViewManager? = null
 
     override fun onAttach(context: Context) {
@@ -25,7 +29,6 @@ class TasksFragment : Fragment() {
     ): View {
         binding = FragmentTasksBinding.inflate(inflater, container, false)
         bottomNavigationViewManager?.setNavigationViewVisibility(true)
-        val adapter = TasksAdapter()
         binding.recyclerView.adapter = adapter
         adapter.submitList(tasks)
         binding.buttonAddTask.setOnClickListener{
@@ -38,6 +41,7 @@ class TasksFragment : Fragment() {
             )
         }
         return binding.root
+        binding.recyclerView.setOnClickListener{}
     }
     companion object{
         val tasks = listOf(
