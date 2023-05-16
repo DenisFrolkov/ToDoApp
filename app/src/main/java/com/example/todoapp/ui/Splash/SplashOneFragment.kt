@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.ui.Splash
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

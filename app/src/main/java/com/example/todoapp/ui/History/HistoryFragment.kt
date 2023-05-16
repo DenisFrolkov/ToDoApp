@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.ui.History
 
 import android.content.Context
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.todoapp.databinding.FragmentHistoryBinding
+import com.example.todoapp.ui.Main.BottomNavigationViewManager
 
 class HistoryFragment : Fragment() {
     private lateinit var binding: FragmentHistoryBinding

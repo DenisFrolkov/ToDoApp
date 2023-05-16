@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.ui.Registration
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
+import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentRegistrationBinding
 import com.example.todoapp.extensions.validateConf
 import com.example.todoapp.extensions.validateEmail
 import com.example.todoapp.extensions.validateName
 import com.example.todoapp.extensions.validatePass
+import com.example.todoapp.ui.Profile.ProfileFragment
 
 class RegistrationFragment : Fragment() {
     private lateinit var binding: FragmentRegistrationBinding

@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.ui.Splash
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

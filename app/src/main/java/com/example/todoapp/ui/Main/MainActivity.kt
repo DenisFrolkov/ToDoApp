@@ -1,10 +1,11 @@
-package com.example.todoapp
+package com.example.todoapp.ui.Main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.todoapp.R
 import com.example.todoapp.databinding.ActivityMainBinding
 
 

@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.example.todoapp.HistoryFragment"
+        android:name="com.example.todoapp.ui.History.HistoryFragment"
         android:label="fragment_history" />
 </navigation>
